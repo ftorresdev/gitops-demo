@@ -1,15 +1,15 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: revers-words-route
+  name: reverse-words-route
   namespace: reverse-words
   labels:
     app: reverse-words
-    app.kubernetes.io/instance: pre-reversewords
+    app.kubernetes.io/instance: pro-reversewords
   annotations:
     openshift.io/host.generated: 'true'
 spec:
-  host: revers-words-route-reverse-words.apps.osc.vacaypollo.org
+  host: reverse-words-route-reverse-words.apps.osc.vacaypollo.org
   subdomain: ''
   to:
     kind: Service
@@ -19,3 +19,4 @@ spec:
     targetPort: http
   wildcardPolicy: None
 status:
+  {}
